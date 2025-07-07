@@ -253,8 +253,8 @@ Le système de validation des cartes fonctionne par vérification externe avec d
 - La carte doit être entourée de murs (`1`) ou d'espaces externes
 - Un seul point de spawn joueur autorisé
 - Aucun espace vide ne doit être adjacent à une zone externe
-- Les entités bonus (portes, collectibles) doivent être accessibles
-- Vérification de l'intégrité structurelle par parcours récursif des zones accessibles
+- Les entités collectibles suivent les memes regles que le joueur
+- Les portes doivent être encadrées par deux murs parallèles sur les côtés opposés (configuration couloir) pour permettre le passage
 
 ### Fonctionnement du ray-casting (DDA)
 Le moteur utilise l'algorithme DDA (Digital Differential Analyzer) pour effectuer la projection de rayons à partir de la position du joueur, en fonction de sa direction (calculée via cos(θ) et sin(θ)). Chaque rayon progresse dans la carte grille par grille, en testant à chaque itération s'il entre en collision avec un mur, un objet, une porte ou un monstre.
